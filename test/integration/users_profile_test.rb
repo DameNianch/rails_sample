@@ -17,6 +17,7 @@ class UsersProfileTest < ActionDispatch::IntegrationTest
     assert_select 'div.pagination', count: 1 
     @user.microposts.paginate(page: 1).each do |micropost|
       assert_match micropost.content, response.body
+    # https://qiita.com/bitcoinjpnnet/items/07ba89a6d329bd2893e5#%E6%BC%94%E7%BF%92-6
     end
   end
 end

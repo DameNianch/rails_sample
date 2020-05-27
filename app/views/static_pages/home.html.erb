@@ -1,5 +1,8 @@
 <% if logged_in? %>
 <%= render "shared/logged_in_home" %>
+<section class="stats">
+    <%= render 'shared/stats' %>
+</section>
 <% else %>
 <%= render "shared/welcome_home" %>
 <%end%>
